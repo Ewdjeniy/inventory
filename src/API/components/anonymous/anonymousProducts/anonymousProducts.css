@@ -1,0 +1,147 @@
+$borderColor: #a2f5ef;
+$bgColor: rgba(222, 232, 250, 0.5);
+
+.products {
+  margin-top: 4rem;
+  padding: 0 1.3rem;
+  font-size: 1.7rem;
+  form {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.productInput {
+  font-size: 1.4rem;
+  background-color: $bgColor;
+  border-radius: 4px;
+  padding-left: 1%;
+  width: 99%;
+  height: 3.6rem;
+  font-weight: 500;
+  border: 0;
+  @media screen and (min-width: 768px) {
+      width: 48%;
+  }
+}
+
+.productInput::placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productValueInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: $bgColor;
+  font-size: 1.4rem/3rem;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(37, 29, 245);
+  padding: 0.3rem 0;
+  margin-bottom: 1rem;
+  span {
+    display: block;
+    margin: 0 5px;
+    white-space: nowrap;
+  }
+  @media screen and (min-width: 768px) {
+    width: 48%;
+    margin-top: auto;
+  }
+}
+
+.productQuantity {
+  flex-grow: 1;
+  input[type="number"] {
+    background-color: rgba(222, 232, 250, 0.51);
+    border: 0;
+    font-size: 1.7rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.saveProduct {
+  background-color: rgba(124, 235, 179, 0.5);
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 0 0.3rem;
+  margin: 0 5px 0 5px;
+}
+
+.productsTabl {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border: 0;
+  font-size: 2rem;
+  padding-right: 5rem;
+}
+
+.productsTable {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border: 0;
+  font-size: 2rem;
+  border-spacing: 0 1.5rem;
+  padding-right: 5px;
+  td {
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(37, 29, 245, 0.5);
+    padding: 0 0.5rem 0.9rem 0.5rem;
+  }
+}
+.deleteProduct {
+  display: block;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2rem;
+  background-color: rgba(252, 3, 3, 0.8);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+  font-family: "Lato";
+  cursor: pointer;
+}
+
+.quantity {
+  height: 2.5rem;
+  font-size: 1.5rem;
+  display: table-cell;
+  text-align: left;
+  padding: 0 5px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.coefficient {
+  max-width: 4.2rem;
+  input[type="number"] {
+    background-color: rgba(222, 232, 250, 0.51);
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.productName {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.reactProductName {
+  padding: 0 10px;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.emptyCell {
+  width: 4.5rem;
+}

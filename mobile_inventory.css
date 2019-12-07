@@ -1,0 +1,541 @@
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 100;
+  src: local("Lato Hairline Italic"),local(Lato-HairlineItalic),url(//fonts.gstatic.com/s/lato/v14/S6u-w4BMUTPHjxsIPx-oPCY.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u-w4BMUTPHjxsIPx-oPCI.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u-w4BMUTPHjxsIPx-oPCQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato Light Italic"),local(Lato-LightItalic),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI9w2_Gwfp.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI9w2_Gwft.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI9w2_Gwfr.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Lato Italic"),local(Lato-Italic),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHjxsAXC-u.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHjxsAXC-q.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHjxsAXC-s.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Lato Bold Italic"),local(Lato-BoldItalic),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwfp.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwft.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwfr.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 900;
+  src: local("Lato Black Italic"),local(Lato-BlackItalic),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI3wi_Gwfp.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI3wi_Gwft.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI3wi_Gwfr.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"),local(Lato-Hairline),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHh30AXC-u.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHh30AXC-q.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHh30AXC-s.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"),local(Lato-Light),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHw.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"),local(Lato-Regular),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWg.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWA.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"),local(Lato-Bold),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHw.woff) format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"),local(Lato-Black),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPGQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHw.woff) format("woff");
+}
+
+header {
+  padding: 47.839px;
+  padding: 1.3rem;
+}
+
+.enter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header {
+  font-size: 62.559px;
+  font-size: 1.7rem;
+  background: linear-gradient(130deg, 
+    rgba(252, 3, 7, .5) 12%, 
+    rgba(252, 132, 3, .4) 16%, rgba(252, 132, 3, .4) 26%, 
+    rgba(252, 232, 3, .3) 30%, rgba(252, 232, 3, .3) 40%, 
+    rgba(48, 252, 3, .3) 44%, rgba(48, 252, 3, .3) 54%, 
+    rgba(3, 252, 252, .2) 58%, rgba(3, 252, 252, .2) 68%, 
+    rgba(3, 15, 252, .2) 72%, rgba(3, 15, 252, .1) 83%, 
+    rgba(236, 3, 252, .1) 87%, rgba(236, 3, 252, .1) 100%);
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.authentificationButtons {
+  background-color: rgba(222, 232, 250, .5);
+  padding: 18.4px;
+  padding: 0.5rem;
+  margin-left: 18.4px;
+  margin-left: 0.5rem;
+  border-radius: 25px;
+  font-size: 47.839px;
+  font-size: 1.3rem;
+  color: rgb(37, 29, 245);
+  cursor: pointer;
+  height: 73.6px;
+  height: 2rem;
+  line-height: 73.6px;
+  line-height: 2rem;
+  border: 1px solid #a2f5ef;
+}
+
+.authentificationButtons:hover {
+  text-decoration: underline;
+}
+
+#enterForm {
+  display: none;
+  padding: 36.8px 0;
+  padding: 1rem 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.input {
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  margin-left: 18.4px;
+  margin-left: 0.5rem;
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 4px;
+  padding-left: 15px;
+  width: 404.799px;
+  width: 11rem;
+  height: 92px;
+  height: 2.5rem;
+}
+
+.registration {
+  width: 100vw;
+  display: table-cell;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.registration form {
+    font-size: 62.559px;
+    font-size: 1.7rem;
+    width: 662.4px;
+    width: 18rem;
+    padding: 73.6px;
+    padding: 2rem;
+    height: 956.8px;
+    height: 26rem;
+    margin: 0 auto;
+    border: 2px solid #a2f5ef;
+    background-color: rgba(255, 255, 255, .4);
+  }
+
+.registrationInput {
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  margin: 55.199px 0;
+  margin: 1.5rem 0;
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 4px;
+  padding-left: 15px;
+  width: 533.599px;
+  width: 14.5rem;
+  height: 92px;
+  height: 2.5rem;
+}
+
+.registrationButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-size: 92px;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 36.8px;
+  padding: 1rem;
+  color: #f7b63b;
+  font-style: italic;
+}
+
+.list {
+  padding: 0 47.839px;
+  padding: 0 1.3rem;
+  font-size: 62.559px;
+  font-size: 1.7rem;
+  
+}
+
+.listName {
+  background-color: rgba(222, 232, 250, .5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  border-radius: 4px;
+  padding: 18.4px 0;
+  padding: 0.5rem 0;
+}
+
+.listName input:nth-child(2) {
+    background-color: transparent;
+    border: 0;
+    font-size: 44.16px;
+    font-size: 1.2rem;
+    height: 92px;
+    height: 2.5rem;
+    padding-left: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+.changeListName{
+  background-color: rgba(124, 235, 179, .5);
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  height: 92px;
+  height: 2.5rem;
+  margin-right: 15px;
+  padding: 0 5px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 25px;
+  line-height: 92px;
+  line-height: 2.5rem;
+}
+
+.deleteList{
+  background-color: rgba(252, 3, 3, .8);
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  height: 92px;
+  height: 2.5rem;
+  padding: 0 5px;
+  border: 0;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  line-height: 92px;
+  line-height: 2.5rem;
+}
+
+.links {
+  padding: 36.8px 0;
+  padding: 1rem 0;
+}
+
+.addListButton {
+  font-size: 147.2px;
+  font-size: 4rem;
+  margin-right: 40px;
+  width: 147.2px;
+  width: 4rem;
+  height: 147.2px;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba(124, 235, 179, .5);
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 147.2px;
+  line-height: 4rem;
+  text-align: center;
+  float: left;
+}
+
+.addListButton:hover {
+  border: 2px solid #a2f5ef;
+}
+
+.lists{
+  display: block;
+  font-size: 55.199px;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  padding: 0 25.759px;
+  padding: 0 0.7rem;
+  margin: 0 3px 20px 0;
+  background-color: rgba(222, 232, 250, .5);
+  height: 73.6px;
+  height: 2rem;
+  line-height: 73.6px;
+  line-height: 2rem;
+  cursor: pointer;
+  float: left;
+}
+
+.active {
+  background-color: rgba(222, 232, 250, .8);
+}
+
+.products {
+  margin-top: 147.2px;
+  margin-top: 4rem;
+  padding: 0 47.839px;
+  padding: 0 1.3rem;
+  font-size: 62.559px;
+  font-size: 1.7rem; 
+}
+
+.productInput {
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  background-color: rgba(222, 232, 250, .5);
+  border-radius: 4px;
+  padding-left: 15px;
+  width: 98%;
+  height: 132.48px;
+  height: 3.6rem;
+  font-weight: 500;
+  border: 0;
+}
+
+.productInput::-webkit-input-placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productInput::-moz-placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productInput:-ms-input-placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productInput::-ms-input-placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productInput::placeholder {
+  color: rgb(37, 29, 245);
+}
+
+.productValueInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  background-color: rgba(222, 232, 250, .5);
+  line-height: 110.399px;
+  line-height: 3rem;
+  font-size: 51.519px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(37, 29, 245);
+  padding: 11.04px 0;
+  padding: 0.3rem 0;
+  margin-bottom: 36.8px;
+  margin-bottom: 1rem;
+}
+
+.productValueInput span {
+    display: block;
+    margin: 0 15px;
+    white-space: nowrap;
+  }
+
+.productQuantity {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.productQuantity input[type="number"] {
+    background-color: rgba(222, 232, 250, .51);
+    border: 0;
+    font-size: 62.559px;
+    font-size: 1.7rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+.saveProduct {
+  background-color: rgba(124, 235, 179, .5);
+  font-size: 44.16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 0 11.04px;
+  padding: 0 0.3rem;
+  margin: 0 10px 0 10px;
+}
+
+.productsTabl {
+  background-color: rgba(255, 255, 255, .5);
+  width: 100%;
+  border: 0;
+  font-size: 73.6px;
+  font-size: 2rem;
+}
+
+.productsTable {
+  background-color: rgba(255, 255, 255, .5);
+  width: 100%;
+  border: 0;
+  font-size: 73.6px;
+  font-size: 2rem;
+  border-spacing: 0 55.199px;
+  border-spacing: 0 1.5rem;
+  padding: 0 15px;
+}
+
+.productsTable td {
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(37, 29, 245, .5);
+    padding: 0 18.4px 11.04px 18.4px;
+    padding: 0 0.5rem 0.3rem 0.5rem;
+  }
+
+.deleteProduct {
+  display: block;
+  text-align: center;
+  width: 73.6px;
+  width: 2rem;
+  height: 73.6px;
+  height: 2rem;
+  line-height: 55.199px;
+  line-height: 1.5rem;
+  background-color: rgba(252, 3, 3, .8);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+  font-family: "Lato";
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.quantity {
+  height: 92px;
+  height: 2.5rem;
+  font-size: 55.199px;
+  font-size: 1.5rem;
+  display: table-cell;
+  text-align: left;
+}
+
+.coefficient {
+  min-width: 110.399px;
+  min-width: 3rem;
+  max-width: 154.56px;
+  max-width: 4.2rem;
+}
+
+.coefficient input[type="number"] {
+    background-color: rgba(222, 232, 250, .51);
+    width: 100%;
+    height: 92px;
+    height: 2.5rem;
+    font-size: 55.199px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+.productName {
+  word-break: break-all;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.reactProductName {
+  word-break: break-all;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.emptyCell {
+  width: 165.6px;
+  width: 4.5rem;
+}
+
+#indicator {
+  border-radius: 50%;
+  width: 55.199px;
+  width: 1.5rem;
+  height: 55.199px;
+  height: 1.5rem;
+  background-color: rgba(43, 148, 31, .8);
+  margin: auto 0 0 10px;
+}
+
+.logOut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 230%;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  padding-bottom: 50px;
+  background-image: url(images/mob9.jpg);
+}
+
+
+/*# sourceMappingURL=mobile_inventory.css.map*/

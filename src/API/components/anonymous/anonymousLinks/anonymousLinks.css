@@ -1,0 +1,92 @@
+$borderColor: #a2f5ef;
+$bgColor: rgba(222, 232, 250, 0.5);
+
+.list {
+  padding: 0 1.3rem;
+  font-size: 1.7rem;
+}
+
+.listName {
+  background-color: rgba(222, 232, 250, 0.5);
+  display: flex;
+  margin-top: 5px;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  input:nth-child(2) {
+    background-color: transparent;
+    border: 0;
+    height: 2.5rem;
+    padding-left: 5px;
+    flex-grow: 1;
+    @media screen and (max-width: 350px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 351px) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.changeListName{
+  background-color: rgba(124, 235, 179, 0.5);
+  font-size: 1.2rem;
+  height: 2.5rem;
+  margin-right: 3px;
+  padding: 0 5px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 25px;
+  line-height: 2.5rem;
+}
+
+.deleteList{
+  background-color: rgba(252, 3, 3, 0.8);
+  font-size: 1.2rem;
+  height: 2.5rem;
+  padding: 0 5px;
+  border: 0;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  line-height: 2.5rem;
+}
+
+.links {
+  padding: 1rem 0;
+}
+
+.addListButton {
+  font-size: 4rem;
+  margin-right: 10px;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba(124, 235, 179, 0.5);
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 4rem;
+  text-align: center;
+  float: left;
+}
+
+.addListButton:hover {
+  border: 2px solid $borderColor;
+}
+
+.lists{
+  display: block;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  padding: 0 0.7rem;
+  margin: 0 3px 5px 0;
+  background-color: $bgColor;
+  height: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  float: left;
+}
+
+.active {
+  background-color: rgba(222, 232, 250, 0.8);
+}

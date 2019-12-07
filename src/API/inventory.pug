@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title   Инвентаризация
+        link(id="cssFile" rel="stylesheet")
+        script(type="text/javascript").
+          (function chooseStyle() {
+            'use strict';
+            
+            // Если экран мобильного телефона (меньше 768 пивселей) подключается первый файл со стилями
+            // в остальных случаях второй
+            if (window.screen.width < 768) {
+              document.getElementById('cssFile').href = 'mobile_inventory.css';
+            } else {
+              document.getElementById('cssFile').href = 'inventory.css';
+            }
+          })();
+    body
+        div(id="root")
+        button(onClick="restore()")  Стереть
+        button(onClick="showAnon()")  Показать  незарегестрированного
+        button(onClick="showAuth()")  Показать  зарегестрированного
+        script(type="text/javascript").
+          
+          function restore() {
+            for (var i = 0; i < localStorage.length; i++) {
+              localStorage.removeItem(localStorage.key(i));
+            }
+          }
+          
+          function showAnon() {
+            alert(localStorage.nord);
+          }
+          
+          function showAuth() {
+            alert(localStorage[localStorage.duke]);
+          }

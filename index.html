@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>  Инвентаризация</title>
+    <link id="cssFile" rel="stylesheet">
+    <script type="text/javascript">
+      (function chooseStyle() {
+        'use strict';
+        
+        // Если экран мобильного телефона (меньше 768 пивселей) подключается первый файл со стилями
+        // в остальных случаях второй
+        if (window.screen.width < 768) {
+          document.getElementById('cssFile').href = 'mobile_inventory.css';
+        } else {
+          document.getElementById('cssFile').href = 'inventory.css';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <button onClick="restore()"> Стереть</button>
+    <button onClick="showAnon()"> Показать  незарегестрированного</button>
+    <button onClick="showAuth()"> Показать  зарегестрированного</button>
+    <script type="text/javascript">
+      function restore() {
+        for (var i = 0; i < localStorage.length; i++) {
+          localStorage.removeItem(localStorage.key(i));
+        }
+      }
+      
+      function showAnon() {
+        alert(localStorage.nord);
+      }
+      
+      function showAuth() {
+        alert(localStorage[localStorage.duke]);
+      }
+    </script>
+  <script type="text/javascript" src="storagePolyfil.js"></script>
+  <script type="text/javascript" src="inventory.bundle.js"></script></body>
+</html>
