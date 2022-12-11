@@ -1,0 +1,62 @@
+header {
+  padding: 1.3rem;
+  @media screen and (min-width: 1022px) {
+    margin: 0 15px;
+  }
+}
+
+.enter {
+  display: flex;
+  color: rgb(124, 235, 179);
+}
+
+.header {
+  font-size: 1.7rem;
+  background: linear-gradient(130deg, 
+    rgba(252, 3, 7, 0.5) 12%, 
+    rgba(252, 132, 3, 0.4) 16%, rgba(252, 132, 3, 0.4) 26%, 
+    rgba(252, 232, 3, 0.3) 30%, rgba(252, 232, 3, 0.3) 40%, 
+    rgba(48, 252, 3, 0.3) 44%, rgba(48, 252, 3, 0.3) 54%, 
+    rgba(3, 252, 252, 0.2) 58%, rgba(3, 252, 252, 0.2) 68%, 
+    rgba(3, 15, 252, 0.2) 72%, rgba(3, 15, 252, 0.1) 83%, 
+    rgba(236, 3, 252, 0.1) 87%, rgba(236, 3, 252, 0.1) 100%);
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.authentificationButtons {
+  background-color: rgba(222, 232, 250, 0.5);
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  color: rgb(37, 29, 245);
+  cursor: pointer;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid #a2f5ef;
+  display: flex;
+  align-items: center;  
+}
+
+.authentificationButtons:hover {
+  text-decoration: underline;
+}
+
+#enterForm {
+  display: none;
+  padding: 1rem 0;
+  justify-content: flex-end;
+}
+
+.input {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding-left: 15px;
+  width: 11rem;
+  height: 2.5rem;
+}
