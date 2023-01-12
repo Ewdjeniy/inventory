@@ -3,7 +3,7 @@
 session_start();
 
 
-if ($_POST['$takeDataFromBdifNoLocalData']) {
+if ($_POST['$takeDataFromBd']) {
   echo make_json_bd();
 }
 

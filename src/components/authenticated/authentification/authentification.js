@@ -35,6 +35,9 @@ class Authentification extends React.Component {
   }
   
   logOut() {
+    localStorage.removeItem(localStorage.duke);
+    localStorage.removeItem('duke');
+    
     this.sendAjax({$log_out: 1}, 'authentification.php', function() {window.location.reload();}, true);
   }
   

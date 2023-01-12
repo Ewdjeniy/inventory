@@ -30,72 +30,74 @@ class Form extends React.Component {
   
   sendAjax(action, data) {
     
+    const that = this;
     data.$online = 1;
-	var boundary = String(Math.random()).slice(2);
-	var boundaryMiddle = '--' + boundary + '\r\n';
-	var boundaryLast = '--' + boundary + '--\r\n'
+    var boundary = String(Math.random()).slice(2);
+    var boundaryMiddle = '--' + boundary + '\r\n';
+    var boundaryLast = '--' + boundary + '--\r\n'
 
-	var body = ['\r\n'];
-	for (var key in data) {
-	  // добавление поля
-	  body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
-	}
+    var body = ['\r\n'];
+    for (var key in data) {
+      // добавление поля
+      body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
+    }
 
-	body = body.join(boundaryMiddle) + boundaryLast;
+    body = body.join(boundaryMiddle) + boundaryLast;
 
-	// Тело запроса готово, отправляем
+    // Тело запроса готово, отправляем
 
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', action, true);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', action, true);
 
-	xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+    xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
 
-	xhr.onreadystatechange = function() {
-      if (this.readyState != 4) {
-        return;
-      }
-      
-      if (this.responseText != 'online') {
-        document.getElementById('indicator').style.backgroundColor = 'rgba(252, 3, 3, 0.8)';
-        const intervalID = setInterval(function() {
-          let array = JSON.parse(localStorage[localStorage.duke]);
-          var data = {
-            $online: 2,
-          };
-          var boundary = String(Math.random()).slice(2);
-          var boundaryMiddle = '--' + boundary + '\r\n';
-          var boundaryLast = '--' + boundary + '--\r\n'
+    xhr.onreadystatechange = function() {
+        if (this.readyState != 4) {
+          return;
+        }
 
-          var body = ['\r\n'];
-          for (var key in data) {
-            // добавление поля
-            body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
-          }
+        if (this.responseText != 'online') {
+          document.getElementById('indicator').style.backgroundColor = 'rgba(252, 3, 3, 0.8)';
+          const intervalID = setInterval(function() {
+            let array = JSON.parse(localStorage[localStorage.duke]);
+            var data = {
+              $online: 2,
+            };
+            var boundary = String(Math.random()).slice(2);
+            var boundaryMiddle = '--' + boundary + '\r\n';
+            var boundaryLast = '--' + boundary + '--\r\n'
 
-          body = body.join(boundaryMiddle) + boundaryLast;
-
-          // Тело запроса готово, отправляем
-
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'base.php', true);
-
-          
-          xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
-          
-          xhr.onreadystatechange = function() {
-            if (this.readyState != 4) {
-              return;
+            var body = ['\r\n'];
+            for (var key in data) {
+              // добавление поля
+              body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
             }
-            if (this.responseText == 'online') {
-              window.location.reload();
-            }
-          }
-          xhr.send(body);
-        }, 10000);
-      }
-	}
 
-	xhr.send(body);
+            body = body.join(boundaryMiddle) + boundaryLast;
+
+            // Тело запроса готово, отправляем
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'base.php', true);
+
+
+            xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+
+            xhr.onreadystatechange = function() {
+              if (this.readyState != 4) {
+                return;
+              }
+              if (this.responseText == 'online') {
+                document.getElementById('indicator').style.backgroundColor = 'rgba(43, 148, 31, 0.8)';
+                that.synchronizeLocalDataWithBd();
+              }
+            }
+            xhr.send(body);
+          }, 10000);
+        }
+    }
+
+    xhr.send(body);
   }
   
   handleLinkFormChange() {
@@ -175,6 +177,44 @@ class Form extends React.Component {
     document[formName][inputQuantityName].value = products[index + 3].quantity;
     localStorage[localStorage.duke] = JSON.stringify(products);
     this.sendAjax(obj);
+  }
+  
+  synchronizeLocalDataWithBd() {
+    const changeThirdItemOnOneinArray = function(array) {
+      array[2] = 1;
+      return array;
+    };
+    var data = {
+      $checkSynchronization: 1,
+      $localStor: JSON.stringify(changeThirdItemOnOneinArray(JSON.parse(localStorage[localStorage.duke]))),
+    };
+    
+    var boundary = String(Math.random()).slice(2);
+    var boundaryMiddle = '--' + boundary + '\r\n';
+    var boundaryLast = '--' + boundary + '--\r\n'
+
+    var body = ['\r\n'];
+    
+    
+    for (var key in data) {
+      // добавление поля
+      body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
+    }
+
+    body = body.join(boundaryMiddle) + boundaryLast;
+
+    // Тело запроса готово, отправляем
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'base.php', true);
+
+    xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+
+    xhr.onreadystatechange = function() {
+      if (this.readyState != 4) return;
+    }
+
+    xhr.send(body);
   }
   
   render() {

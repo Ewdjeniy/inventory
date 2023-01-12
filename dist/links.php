@@ -125,6 +125,13 @@ function delete_link($id) {
         $result = mysqli_query($link, $query);
       }
     }
+    
+    $query=mysqli_query("select * $links_table");
+    $num=mysqli_num_rows($query);
+    if ($num == 0) {
+      $query = "INSERT INTO $links_table VALUES (1, 'новый')";
+      $result = mysqli_query($link, $query);
+    }
 
     $query = "DELETE FROM $inventory_table WHERE linkName = $id";
     $result = mysqli_query($link, $query);
